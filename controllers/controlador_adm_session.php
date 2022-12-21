@@ -6,7 +6,7 @@
  * @final En proceso
  *
  */
-namespace tglobally\tg_facturacion\controllers;
+namespace tglobally\tg_direccion_postal\controllers;
 
 use config\generales;
 use gamboamartin\errores\errores;
@@ -21,8 +21,8 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
     public string $mensaje_html = '';
     public string $seccion = 'adm_seccion';
 
-    public array $secciones = array("fc_factura","fc_partida","fc_csd","fc_key_csd","fc_cer_csd","fc_conf_traslado",
-        "fc_traslado","fc_conf_retenido","fc_retenido");
+    public array $secciones = array('dp_pais','dp_estado','dp_municipio','dp_cp','dp_colonia_postal','dp_colonia',
+        'dp_calle_pertenece','dp_calle','dp_direccion_pendiente');
     public array $links_catalogos = array();
 
     public stdClass $links;
@@ -38,24 +38,23 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
             die('Error');
         }
 
-        $this->links_catalogos["fc_factura"]["titulo"] = "Facturas";
-        $this->links_catalogos["fc_factura"]["subtitulo"] = "Catalogo";
-        $this->links_catalogos["fc_partida"]["titulo"] = "Partidas";
-        $this->links_catalogos["fc_partida"]["subtitulo"] = "Catalogo";
-        $this->links_catalogos["fc_csd"]["titulo"] = "CSD";
-        $this->links_catalogos["fc_csd"]["subtitulo"] = "Catalogo";
-        $this->links_catalogos["fc_key_csd"]["titulo"] = "KEY CSD";
-        $this->links_catalogos["fc_key_csd"]["subtitulo"] = "Catalogo";
-        $this->links_catalogos["fc_cer_csd"]["titulo"] = "CER CSD";
-        $this->links_catalogos["fc_cer_csd"]["subtitulo"] = "Catalogo";
-        $this->links_catalogos["fc_conf_traslado"]["titulo"] = "Configuracion Traslado";
-        $this->links_catalogos["fc_conf_traslado"]["subtitulo"] = "Catalogo";
-        $this->links_catalogos["fc_traslado"]["titulo"] = "Traslado";
-        $this->links_catalogos["fc_traslado"]["subtitulo"] = "Catalogo";
-        $this->links_catalogos["fc_conf_retenido"]["titulo"] = "Configuracion Retenido";
-        $this->links_catalogos["fc_conf_retenido"]["subtitulo"] = "Catalogo";
-        $this->links_catalogos["fc_retenido"]["titulo"] = "Retenido";
-        $this->links_catalogos["fc_retenido"]["subtitulo"] = "Catalogo";
+        $this->links_catalogos["dp_pais"]["titulo"] = "Países";
+        $this->links_catalogos["dp_pais"]["subtitulo"] = "Catálogo";
+        $this->links_catalogos["dp_estado"]["titulo"] = "Estados";
+        $this->links_catalogos["dp_estado"]["subtitulo"] = "Catálogo";
+        $this->links_catalogos["dp_municipio"]["titulo"] = "Municipios";
+        $this->links_catalogos["dp_municipio"]["subtitulo"] = "Catálogo";
+        $this->links_catalogos["dp_cp"]["titulo"] = "Códigos Postáles";
+        $this->links_catalogos["dp_cp"]["subtitulo"] = "Catálogo";
+        $this->links_catalogos["dp_colonia"]["titulo"] = "Colonias";
+        $this->links_catalogos["dp_colonia"]["subtitulo"] = "Catálogo";
+        $this->links_catalogos["dp_colonia_postal"]["titulo"] = "Colonias Postales";
+        $this->links_catalogos["dp_colonia_postal"]["subtitulo"] = "Catálogo";
+        $this->links_catalogos["dp_calle"]["titulo"] = "Calles";
+        $this->links_catalogos["dp_calle"]["subtitulo"] = "Catálogo";
+        $this->links_catalogos["dp_calle_pertenece"]["titulo"] = "Calles Pertenece";
+        $this->links_catalogos["dp_calle_pertenece"]["subtitulo"] = "Catálogo";
+
     }
 
     /**
