@@ -1,6 +1,5 @@
 <?php /** @var \tglobally\tg_direccion_postal\controllers\controlador_adm_session $controlador */
 
-
 use config\views;
 $url_assets = (new views())->url_assets;
 ?>
