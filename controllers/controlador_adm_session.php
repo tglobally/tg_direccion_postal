@@ -22,7 +22,7 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
     public string $seccion = 'adm_seccion';
 
     public array $secciones = array('dp_pais','dp_estado','dp_municipio','dp_cp','dp_colonia_postal','dp_colonia',
-        'dp_calle_pertenece','dp_calle','dp_direccion_pendiente');
+        'dp_calle_pertenece','dp_calle');
     public array $links_catalogos = array();
 
     public stdClass $links;
@@ -52,8 +52,9 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
         $this->links_catalogos["dp_colonia_postal"]["subtitulo"] = "Catálogo";
         $this->links_catalogos["dp_calle"]["titulo"] = "Calles";
         $this->links_catalogos["dp_calle"]["subtitulo"] = "Catálogo";
-        $this->links_catalogos["dp_calle_pertenece"]["titulo"] = "Calles Pertenece";
-        $this->links_catalogos["dp_calle_pertenece"]["subtitulo"] = "Catálogo";
+
+        /**$this->links_catalogos["dp_calle_pertenece"]["titulo"] = "Calles Pertenece";
+        $this->links_catalogos["dp_calle_pertenece"]["subtitulo"] = "Catálogo";**/
 
     }
 
