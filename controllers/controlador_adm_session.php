@@ -52,6 +52,8 @@ class controlador_adm_session extends \gamboamartin\controllers\controlador_adm_
         $this->links_catalogos["dp_colonia_postal"]["subtitulo"] = "Catálogo";
         $this->links_catalogos["dp_calle"]["titulo"] = "Calles";
         $this->links_catalogos["dp_calle"]["subtitulo"] = "Catálogo";
+        $this->links_catalogos["dp_calle_pertenece"]["titulo"] = "Calle Pertenece";
+        $this->links_catalogos["dp_calle_pertenece"]["subtitulo"] = "Catálogo";
 
         /**$this->links_catalogos["dp_calle_pertenece"]["titulo"] = "Calles Pertenece";
         $this->links_catalogos["dp_calle_pertenece"]["subtitulo"] = "Catálogo";**/
